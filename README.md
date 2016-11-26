@@ -38,18 +38,12 @@ Use with Docker-compose
     image: porchn/php5.6.28-apache
     container_name: apache
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./apache2/conf:/etc/apache2/sites-enabled
       - ./apache2/www:/var/www
-      - ./file-media/farms:/var/www/farms
-      - ./file-media/static:/var/www/static
       - ./apache2/logs:/var/log/apache2
     environment:
       - TZ=Asia/Bangkok
     restart: always
-    links: 
-      - postfix:postfix
-    networks:
-      - webnetwork
 ```
