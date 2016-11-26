@@ -3,7 +3,7 @@
 This repo used in Dockerhub url 'https://hub.docker.com/r/porchn/php5.6.28-apache/'
 
 
-Module install in images
+## Module install in images
 * gd
 * iconv
 * mcrypt
@@ -15,24 +15,24 @@ Module install in images
 * mbstring
 * mod_rewrite
 
-External extension
+## External extension
 * Memcached
 * Composer
 
-Volume
+## Volume
 * /var/www
 * /var/log/apache2
 * /etc/apache2/sites-available
 
-Port
+## Port
 * 80
 * 443
 
-How to use with Docker
+## How to use with Docker
 ```
 docker run --name testphp -p 8080:80 -d -v $(pwd):/var/www/html porchn/php5.6.28-apache
 ```
-Use with Docker-compose 
+## Use with Docker-compose 
 ```
   apache:
     image: porchn/php5.6.28-apache
