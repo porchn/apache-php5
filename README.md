@@ -30,7 +30,7 @@ Port
 
 How to use with Docker
 ```
-docker run --name testphp -p 8080:80 -d -v /Users/pichaichin/Sites/test:/var/www/html porchn/php5-apache
+docker run --name testphp -p 8080:80 -d -v /Users/pichaichin/Sites/test:/var/www/html porchn/php5.6.28-apache
 ```
 Use with Docker-compose 
 ```
