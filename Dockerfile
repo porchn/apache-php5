@@ -1,6 +1,12 @@
 FROM php:5-apache
 MAINTAINER porchn <pichai.chin@gmail.com>
 
+ENV TZ=Asia/Bangkok
+
+# Set the timezone.
+RUN echo $TZ > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
+
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
