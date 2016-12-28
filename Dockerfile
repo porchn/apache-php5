@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
         libpng12-dev \
         libmemcached-dev \
         libicu-dev \
+        openssl \
     && pecl install memcached \
     && docker-php-ext-enable memcached \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
@@ -27,6 +28,10 @@ RUN curl -sS https://getcomposer.org/installer | php \
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
+
+# Enable ssl
+RUN a2enmod ssl
+RUN a2enmod headers
 
 VOLUME ['/etc/apache2/sites-available','/var/www','/var/log/apache2']
 
