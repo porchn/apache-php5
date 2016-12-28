@@ -18,6 +18,7 @@ This repo used in Dockerhub url 'https://hub.docker.com/r/porchn/php5.6.28-apach
 ## External extension
 * Memcached
 * Composer
+* OpenSSL
 
 ## Volume
 * /var/www
