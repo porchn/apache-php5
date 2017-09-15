@@ -23,7 +23,7 @@ This repo used in Dockerhub url 'https://hub.docker.com/r/porchn/php5.6.28-apach
 ## Volume
 * /var/www
 * /var/log/apache2
-* /etc/apache2/sites-available
+* /etc/apache2/sites-enabled
 
 ## Port
 * 80
